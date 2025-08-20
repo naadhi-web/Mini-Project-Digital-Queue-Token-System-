@@ -1,0 +1,44 @@
+3. Business Logic Flow
+
+➕ Join Queue:
+1. User requests token.
+2. Backend:
+• Checks current last token number.
+• Adds 1 to generate new token.
+• Saves token in DB with status = pending.
+
+▶️ Call Next Token (Admin):
+1. Admin calls /admin/next-token.
+2. Backend:
+• Finds next token with status = pending.
+• Changes its status to active.
+• Sends real-time notification.
+
+🔔 Real-time Notifications:
+• Use Firebase Cloud Messaging (FCM), or WebSocket (Socket.IO):
+• “You are next”
+• “Token skipped”
+• “Service delayed”
+
+❌ Cancel/Expire Token:
+• User or system can cancel/expire a token after a timeout (e.g., 5 mins if not present).
+
+⸻
+
+🗄️ 4. Database Tables / Collections
+
+📘 users
+
+
+🎫 tokens
+
+
+🛠️ admins
+
+
+⭐ feedback
+
+
+🔐 5. Authentication
+• Use JWT (JSON Web Tokens) or Session-based login.
+• Role-based access: User vs Admin
