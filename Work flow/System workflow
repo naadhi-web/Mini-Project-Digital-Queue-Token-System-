@@ -1,0 +1,17 @@
+1. User App (Flutter):
+• Login/Register
+• Choose service (Library or Canteen)
+• Book token
+• View real-time queue
+• Get notified when it’s their turn
+
+2. Admin Panel (Django):
+• Dashboard to view/manage queues
+• Mark tokens as completed/skipped
+• Set operational hours or service limits
+
+3. Backend API (Django REST Framework):
+• Auth APIs
+• Queue handling
+• Notification trigger API
+• Token CRUD
