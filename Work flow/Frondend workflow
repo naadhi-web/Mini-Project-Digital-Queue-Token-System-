@@ -1,0 +1,73 @@
+1. 🔐 Login / Sign Up Page
+• Fields:
+• Email / Student ID
+• Password
+• Options:
+• Forgot password
+• New user? Register
+• Redirect:
+• After login → Home/Dashboard
+
+⸻
+
+2. 🏠 Home / Dashboard Page
+• User selects:
+• 📚 “Library Queue”
+• 🍽️ “Canteen Queue”
+• Also shows:
+• Active token (if already joined)
+• Estimated waiting time
+
+⸻
+
+3. ➕ Join Queue Page
+• Options:
+• Select service purpose:
+• Library: “Issue Book”, “Return Book”, “Study Table”
+• Canteen: “Lunch”, “Snacks”, etc.
+• Confirm to get token
+• Shows:
+• Token number
+• Number of people ahead
+• Estimated time
+
+⸻
+
+4. 📊 Live Queue Status Page
+• Dynamic status update:
+• “Now Serving Token #45”
+• “You are Token #49 — 4 ahead”
+• Real-time updates via WebSocket/Firebase
+• Cancel token option
+
+⸻
+
+5. 🔔 Notification Pop-up
+• When user’s token is about to come
+• Message:
+“You’re next! Please be ready.”
+
+⸻
+
+6. 👤 Profile / History Page
+• View:
+• Past tokens
+• Service times
+• Feedback given (optional)
+• Edit:
+• Name, email, password
+
+⸻
+
+7. 📤 Feedback Page (Optional)
+• After service:
+• Rate service: ⭐⭐⭐⭐⭐
+• Short comments box
+
+⸻
+
+8. ⚙️ Admin Login Panel (Separate)
+• Admin-only login to:
+• View/manage queues
+• Call next token
+• Broadcast messages
