@@ -1,0 +1,4 @@
+Digital Queue Token System helps students book tokens online for Library or Canteen, avoiding long physical queues.
+Users can see real-time queue status and get notified when their turn comes.
+Admins (staff) manage the queue by marking tokens as Completed/Skipped for smooth service
+
