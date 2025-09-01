@@ -1,0 +1,25 @@
+{% extends "core/base.html" %}
+{% block content %}
+<h4>Monitor: {{ slot }}</h4>
+<table class="table">
+  <thead><tr><th>#</th><th>User</th><th>Status</th><th>ETA (min)</th><th>Actions</th></tr></thead>
+  <tbody>
+    {% for t in tokens %}
+      <tr>
+        <td>{{ t.number }}</td>
+        <td>{{ t.user.username }}</td>
+        <td>{{ t.status }}</td>
+        <td>{% if t.status in "pending approved" %}{{ t.eta_minutes|default:"-" }}{% else %}-{% endif %}</td>
+        <td>
+          {% if t.status in "pending approved" %}
+            <a class="btn btn-sm btn-success" href="{% url 'approve_token' t.id %}">Approve</a>
+            <a class="btn btn-sm btn-warning" href="{% url 'skip_token' t.id %}">Skip</a>
+            <a class="btn btn-sm btn-info" href="{% url 'reschedule_token' t.id %}">Reschedule</a>
+            <a class="btn btn-sm btn-dark" href="{% url 'serve_token' t.id %}">Serve</a>
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
