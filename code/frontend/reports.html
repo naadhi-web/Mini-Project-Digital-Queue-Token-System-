@@ -1,0 +1,10 @@
+{% extends "core/base.html" %}
+{% block content %}
+<h4>Reports Summary</h4>
+<ul class="list-group">
+  <li class="list-group-item">Total Slots: {{ total_slots }}</li>
+  <li class="list-group-item">Total Tokens: {{ total_tokens }}</li>
+  <li class="list-group-item">Served: {{ served }}</li>
+  <li class="list-group-item">Pending/Approved: {{ pending }}</li>
+</ul>
+{% endblock %}
